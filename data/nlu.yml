@@ -1,0 +1,157 @@
+version: "3.1"
+
+nlu:
+# --- SALUDOS ---
+- intent: greet_en
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - how are you?
+    - good morning
+    - good evening
+
+- intent: greet_es
+  examples: |
+    - hola
+    - buenos días
+    - ¿cómo estás?
+    - buenas tardes
+    - buenas noches
+    - qué tal
+    - saludos
+
+# --- DESPEDIDAS ---
+- intent: goodbye_en
+  examples: |
+    - bye
+    - goodbye
+    - see you later
+    - have a nice day
+
+- intent: goodbye_es
+  examples: |
+    - adiós
+    - nos vemos
+    - chao
+    - hasta luego
+    - que tengas buen día
+
+# --- AFIRMACIONES ---
+- intent: affirm_en
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - correct
+
+- intent: affirm_es
+  examples: |
+    - sí
+    - s
+    - claro
+    - por supuesto
+    - correcto
+    - así es
+
+# --- NEGACIONES ---
+- intent: deny_en
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+
+- intent: deny_es
+  examples: |
+    - no
+    - n
+    - nunca
+    - no lo creo
+    - para nada
+
+# --- ESTADOS DE ÁNIMO ---
+- intent: mood_great_en
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - wonderful
+    - I am feeling very good
+
+- intent: mood_great_es
+  examples: |
+    - perfecto
+    - genial
+    - increíble
+    - maravilloso
+    - me siento muy bien
+    - excelente
+    - hola muy bien
+    - todo excelente
+    - muy bien
+  
+- intent: agradecer_es
+  examples: |
+    - gracias
+    - muchas gracias
+    - te lo agradezco
+    - súper, gracias
+    - muy amable
+    - gracias por la info
+
+- intent: mood_unhappy_en
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - unhappy
+
+- intent: mood_unhappy_es
+  examples: |
+    - mi día fue horrible
+    - estoy triste
+    - no me siento muy bien
+    - infeliz
+    - decepcionado
+
+# --- RETO DE BOT ---
+- intent: bot_challenge_en
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+
+- intent: bot_challenge_es
+  examples: |
+    - ¿eres un bot?
+    - ¿eres humano?
+    - ¿estoy hablando con un bot?
+
+
+- intent: give_name_es
+  examples: |
+    - me llamo [Cristhian](nombre)
+    - soy [Carlos](nombre)
+    - mi nombre es [Ana](nombre)
+    - puedes llamarme [Kristhian](nombre)
+    - [Pedro](nombre)
+
+
+- intent: give_name_en
+  examples: |
+    - my name is [Cristhian](nombre)
+    - I am [Carlos](nombre)
+    - call me [Ana](nombre)
+    - I'm [Kristhian](nombre)
+
+- intent: pregunta_compleja_es
+  examples: |
+    - ¿qué es la inteligencia artificial?
+    - explícame la teoría de la relatividad
+    - dame una receta de pollo
+    - ¿quién ganó el mundial de 2022?
+    - tengo una pregunta sobre programación
+    - ¿me puedes explicar qué es Node.js?

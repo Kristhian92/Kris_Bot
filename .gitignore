@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+.env
+
+# Rasa
+.rasa/
+models/
+graph.html
+results/
+
+# Llaves y Tokens (Seguridad)
+*.key
+*.pem
+credentials.yml
+endpoints.yml
+
+# Logs
+*.log

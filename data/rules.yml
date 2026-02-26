@@ -1,0 +1,40 @@
+version: "3.1"
+
+rules:
+# --- REGLAS EN INGLÉS ---
+- rule: Say goodbye anytime the user says goodbye (EN)
+  steps:
+  - intent: goodbye_en
+  - action: utter_goodbye_en
+
+- rule: Say 'I am a bot' anytime the user challenges (EN)
+  steps:
+  - intent: bot_challenge_en
+  - action: utter_iamabot_en
+
+# --- REGLAS EN ESPAÑOL ---
+- rule: Say goodbye anytime the user says goodbye (ES)
+  steps:
+  - intent: goodbye_es
+  - action: utter_goodbye_es
+
+- rule: Say 'I am a bot' anytime the user challenges (ES)
+  steps:
+  - intent: bot_challenge_es
+  - action: utter_iamabot_es
+
+- rule: Derivar preguntas complejas a Gemini IA
+  steps:
+  - intent: pregunta_compleja_es
+  - action: action_respuesta_gemini
+
+- rule: Respuesta por defecto con Gemini
+  steps:
+  - intent: nlu_fallback
+  - action: action_respuesta_gemini
+
+- rule: Responder al agradecimiento
+  steps:
+  - intent: agradecer_es
+  - action: utter_de_nada_es
+

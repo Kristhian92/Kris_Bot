@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KrisBot - Asistente IA</title>
+</head>
+
+<body style="background-color: #f4f7f6; font-family: Arial, sans-serif;">
+
+    <h1 style="text-align: center; margin-top: 50px;">Bienvenido a mi Web con IA</h1>
+
+    <script>
+        !(function () {
+            let e = document.createElement("script"),
+                t = document.head || document.getElementsByTagName("head")[0];
+            (e.src =
+                "https://cdn.jsdelivr.net/npm/rasa-webchat@1.0.1/lib/index.js"),
+                (e.async = !0),
+                (e.onload = () => {
+                    window.WebChat.default(
+                        {
+                            customData: { language: "es" },
+                            socketUrl: "http://localhost:5005", // Conexión a tu Rasa
+                            title: "KrisBot",
+                            subtitle: "Asistente Virtual Híbrido",
+                            initPayload: "/greet_es",
+                            profileAvatar: "https://i.imgur.com/nGF1K8f.jpg",
+                            params: { storage: "session" }
+                        },
+                        null
+                    );
+                }),
+                t.insertBefore(e, t.firstChild);
+        })();
+    </script>
+</body>
+
+</html>

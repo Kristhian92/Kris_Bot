@@ -1,0 +1,28 @@
+# ============================================
+# RASA Framework - Espanol
+# Python Version: 3.10.x
+# Metodo de instalacion: --use-pep517
+# ============================================
+# ------------------------------------------------
+# CORE - RASA Framework
+# RASA instala automaticamente sus dependencias
+# incluyendo TensorFlow, transformers, etc.
+# ------------------------------------------------
+rasa==3.7.0
+rasa-sdk==3.7.0
+# ------------------------------------------------
+# SPACY - Procesamiento de lenguaje en espanol
+# Nota: El modelo se instala por separado con:
+# python -m spacy download es_core_news_md
+# ------------------------------------------------
+spacy>=3.7.0
+# ------------------------------------------------
+# NLP ADICIONAL PARA ESPANOL
+# ------------------------------------------------
+nltk>=3.8.0
+dateparser>=1.2.0
+unidecode>=1.3.0
+# ------------------------------------------------
+# TESTING (opcional)
+# ------------------------------------------------
+pytest>=7.4.0

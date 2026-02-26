@@ -1,0 +1,68 @@
+version: "3.1"
+
+stories:
+# --- HISTORIAS EN INGLÉS ---
+- story: happy path (EN)
+  steps:
+  - intent: greet_en
+  - action: utter_greet_en
+  - intent: mood_great_en
+  - action: utter_happy_en
+
+- story: sad path 1 (EN)
+  steps:
+  - intent: greet_en
+  - action: utter_greet_en
+  - intent: mood_unhappy_en
+  - action: utter_cheer_up_en
+  - action: utter_did_that_help_en
+  - intent: affirm_en
+  - action: utter_happy_en
+
+- story: sad path 2 (EN)
+  steps:
+  - intent: greet_en
+  - action: utter_greet_en
+  - intent: mood_unhappy_en
+  - action: utter_cheer_up_en
+  - action: utter_did_that_help_en
+  - intent: deny_en
+  - action: utter_goodbye_en
+
+- story: usuario da su nombre (ES)
+  steps:
+  - intent: give_name_es
+  - action: utter_greet_name_es
+
+# --- HISTORIAS EN ESPAÑOL ---
+- story: happy path (ES)
+  steps:
+  - intent: greet_es
+  - action: utter_greet_es
+  - intent: mood_great_es
+  - action: utter_happy_es
+
+- story: sad path 1 (ES)
+  steps:
+  - intent: greet_es
+  - action: utter_greet_es
+  - intent: mood_unhappy_es
+  - action: utter_cheer_up_es
+  - action: utter_did_that_help_es
+  - intent: affirm_es
+  - action: utter_happy_es
+
+- story: sad path 2 (ES)
+  steps:
+  - intent: greet_es
+  - action: utter_greet_es
+  - intent: mood_unhappy_es
+  - action: utter_cheer_up_es
+  - action: utter_did_that_help_es
+  - intent: deny_es
+  - action: utter_goodbye_es
+
+- story: user gives name (EN)
+  steps:
+  - intent: give_name_en
+  - action: utter_greet_name_en

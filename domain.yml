@@ -1,0 +1,82 @@
+version: "3.1"
+
+intents:
+  - pregunta_compleja_es
+  - greet_en
+  - greet_es
+  - nlu_fallback
+  - goodbye_en
+  - goodbye_es
+  - affirm_en
+  - affirm_es
+  - deny_en
+  - deny_es
+  - mood_great_en
+  - mood_great_es
+  - mood_unhappy_en
+  - mood_unhappy_es
+  - bot_challenge_en
+  - bot_challenge_es
+  - give_name_es
+  - give_name_en
+  - agradecer_es
+
+actions:
+  - action_respuesta_gemini
+
+responses:
+  utter_greet_en:
+  - text: "Hey! How are you?"
+  utter_greet_es:
+  - text: "¡Hola! ¿Cómo estás?"
+  utter_de_nada_es:
+  - text: "¡Con mucho gusto! ¿Te puedo ayudar con algo más?"
+
+  utter_cheer_up_en:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+  utter_cheer_up_es:
+  - text: "Aquí tienes algo para animarte:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help_en:
+  - text: "Did that help you?"
+  utter_did_that_help_es:
+  - text: "¿Te ayudó esto?"
+
+  utter_happy_en:
+  - text: "Great, carry on!"
+  utter_happy_es:
+  - text: "¡Me alegra!"
+
+  utter_goodbye_en:
+  - text: "Bye"
+  utter_goodbye_es:
+  - text: "¡Adiós!"
+
+  utter_iamabot_en:
+  - text: "I am a bot, powered by Rasa."
+  utter_iamabot_es:
+  - text: "Soy un bot impulsado por Rasa."
+
+  utter_greet_name_es:
+  - text: "¡Mucho gusto, {nombre_usuario}! ¿En qué te puedo ayudar hoy?"
+
+  utter_greet_name_en:
+  - text: "Nice to meet you, {nombre_usuario}! How can I help you today?"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+
+entities:
+  - nombre
+
+slots:
+  nombre_usuario:
+    type: text
+    initial_value: "amigo" # <-- Nuestro escudo protector contra errores
+    mappings:
+    - type: from_entity
+      entity: nombre
