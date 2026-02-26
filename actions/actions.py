@@ -6,7 +6,7 @@ from groq import Groq
 # Configuración de Groq
 # Reemplaza con la clave que acabas de crear
 client = Groq(
-    api_key="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")
+    api_key="SECRET_KEY")
 
 
 class ActionRespuestaGemini(Action):
