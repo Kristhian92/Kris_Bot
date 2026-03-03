@@ -4,7 +4,7 @@
 # from rasa_sdk.executor import CollectingDispatcher
 
 # # Configura tu clave secreta de Gemini
-# genai.configure(api_key="AIzaSyCXrvGlneH4u_5qCFugYOqW37XFgFomtqo")
+# genai.configure(api_key="")
 # # Usamos el modelo más rápido y eficiente
 # modelo = genai.GenerativeModel('gemini-2.5-flash')
 
@@ -23,12 +23,12 @@
 
 #         # 2. Le damos un contexto a Gemini para que sepa quién es
 #         # 2. Le damos un contexto y personalidad a Gemini
-#         prompt = f"""
-#         Eres un asistente virtual avanzado llamado KrisBot. 
+#         prompt = f"""Eres un asistente virtual avanzado llamado KrisBot.
 #         Si el usuario te hace una pregunta técnica o compleja, respóndele de forma clara y estructurada.
-#         Si el usuario te dice algo informal, jerga o una charla casual, respóndele de forma muy natural, amigable y breve.
-#         Mensaje del usuario: {mensaje_usuario}
-#         """
+#        Si el usuario te dice algo informal, jerga o una charla casual, respóndele de forma muy natural, amigable y breve.
+#         Si el usuario te indica que ya terminó, que no necesita más ayuda o dice 'solo eso', despídete cortésmente y cierra el tema de inmediato. No hagas preguntas adicionales para continuar la conversación.
+
+#         Mensaje del usuario: {mensaje_usuario}"""
 #         try:
 #             # 3. Enviamos el mensaje a Gemini
 #             respuesta = modelo.generate_content(prompt)
@@ -52,7 +52,7 @@ from groq import Groq
 # Configuración de Groq
 # Reemplaza con la clave que acabas de crear
 client = Groq(
-    api_key="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")
+    api_key="GROQ_API_KEY")
 
 
 class ActionRespuestaGemini(Action):
@@ -65,12 +65,12 @@ class ActionRespuestaGemini(Action):
 
         mensaje_usuario = tracker.latest_message.get('text')
 
-        prompt = f"""
-        Eres un asistente virtual avanzado llamado KrisBot. 
-        Si el usuario te hace una pregunta técnica o compleja, respóndele de forma clara y estructurada.
-        Si el usuario te dice algo informal, jerga o una charla casual, respóndele de forma muy natural, amigable y breve.
-        Mensaje del usuario: {mensaje_usuario}
-        """
+        prompt = f"""Eres un asistente virtual avanzado llamado KrisBot.
+     Si el usuario te hace una pregunta técnica o compleja, respóndele de forma clara y estructurada.
+     Si el usuario te dice algo informal, jerga o una charla casual, respóndele de forma muy natural, amigable y breve.
+     Si el usuario te indica que ya terminó, que no necesita más ayuda o dice 'solo eso', despídete cortésmente y cierra el tema de inmediato. No hagas preguntas adicionales para continuar la conversación.
+
+     Mensaje del usuario: {mensaje_usuario}"""
 
         try:
             # Llamada a Groq (Usando Llama 3.3 de 70 billones de parámetros)

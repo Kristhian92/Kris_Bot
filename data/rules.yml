@@ -23,18 +23,34 @@ rules:
   - intent: bot_challenge_es
   - action: utter_iamabot_es
 
+# --- LA MAGIA DE GEMINI AQUÍ ---
+- rule: Manejar el inicio de Telegram
+  steps:
+  - intent: start
+  - action: action_respuesta_gemini
+
 - rule: Derivar preguntas complejas a Gemini IA
   steps:
   - intent: pregunta_compleja_es
   - action: action_respuesta_gemini
 
-- rule: Respuesta por defecto con Gemini
+- rule: Enviar TODOS los saludos a Gemini (Para que no interrumpa las preguntas)
+  steps:
+  - intent: greet_es
+  - action: action_respuesta_gemini
+
+- rule: Respuesta por defecto con Gemini (Fallback)
   steps:
   - intent: nlu_fallback
   - action: action_respuesta_gemini
 
+- rule: Despedirse si el usuario no quiere nada más
+  steps:
+  - intent: deny_es
+  - action: utter_goodbye_es
+
+# --- CORRECCIÓN DE ERRORES ---
 - rule: Responder al agradecimiento
   steps:
   - intent: agradecer_es
   - action: utter_de_nada_es
-

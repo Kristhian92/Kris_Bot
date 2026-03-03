@@ -38,6 +38,15 @@ nlu:
     - hasta luego
     - que tengas buen día
 
+- intent: deny_es
+  examples: |
+    - no
+    - no gracias
+    - solo eso
+    - eso es todo
+    - nada más
+    - por ahora nada más
+
 # --- AFIRMACIONES ---
 - intent: affirm_en
   examples: |
