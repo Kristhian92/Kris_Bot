@@ -1,3 +1,4 @@
+
 # import google.generativeai as genai
 # from typing import Any, Text, Dict, List
 # from rasa_sdk import Action, Tracker
@@ -44,6 +45,8 @@
 #         return []
 
 
+
+
 from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
@@ -53,7 +56,6 @@ from groq import Groq
 # Reemplaza con la clave que acabas de crear
 client = Groq(
     api_key="GROQ_API_KEY")
-
 
 class ActionRespuestaGemini(Action):
     def name(self) -> Text:
