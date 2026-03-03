@@ -47,15 +47,19 @@
 
 
 
+import os
+from dotenv import load_dotenv
 from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from groq import Groq
 
-# Configuración de Groq
-# Reemplaza con la clave que acabas de crear
-client = Groq(
-    api_key="GROQ_API_KEY")
+# 1. Cargar las variables del archivo .env
+load_dotenv()
+
+# 2. Configuración de Groq leyendo la clave secreta
+mi_clave_groq = os.getenv("GROQ_API_KEY")
+client = Groq(api_key=mi_clave_groq)
 
 class ActionRespuestaGemini(Action):
     def name(self) -> Text:
