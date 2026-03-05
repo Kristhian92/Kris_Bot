@@ -1,12 +1,21 @@
-2026/03/02-02:32:15.612 180e4 Reusing MANIFEST /home/ubuntu/krisbot-project/Kris_Bot/whatsapp-bridge/.wwebjs_auth/session/Default/Local Storage/leveldb/MANIFEST-000001
-2026/03/02-02:32:15.616 180e4 Recovering log #3
-2026/03/02-02:32:15.617 180e4 Reusing old log /home/ubuntu/krisbot-project/Kris_Bot/whatsapp-bridge/.wwebjs_auth/session/Default/Local Storage/leveldb/000003.log 
-2026/03/02-13:42:55.417 180e7 Level-0 table #5: started
-2026/03/02-13:42:55.419 180e7 Level-0 table #5: 18425 bytes OK
-2026/03/02-13:42:55.421 180e7 Delete type=0 #3
-2026/03/02-18:33:10.985 180e7 Level-0 table #7: started
-2026/03/02-18:33:10.987 180e7 Level-0 table #7: 13808 bytes OK
-2026/03/02-18:33:10.989 180e7 Delete type=0 #4
-2026/03/03-05:13:43.964 180e7 Level-0 table #9: started
-2026/03/03-05:13:43.967 180e7 Level-0 table #9: 13619 bytes OK
-2026/03/03-05:13:43.970 180e7 Delete type=0 #6
+2026/03/03-19:10:01.188 2270c Reusing MANIFEST /home/ubuntu/krisbot-project/Kris_Bot/whatsapp-bridge/.wwebjs_auth/session/Default/Local Storage/leveldb/MANIFEST-000001
+2026/03/03-19:10:01.193 2270c Recovering log #8
+2026/03/03-19:10:01.194 2270c Reusing old log /home/ubuntu/krisbot-project/Kris_Bot/whatsapp-bridge/.wwebjs_auth/session/Default/Local Storage/leveldb/000008.log 
+2026/03/03-22:00:14.709 22710 Level-0 table #12: started
+2026/03/03-22:00:14.712 22710 Level-0 table #12: 13456 bytes OK
+2026/03/03-22:00:14.714 22710 Delete type=0 #8
+2026/03/04-05:30:33.490 22710 Level-0 table #14: started
+2026/03/04-05:30:33.492 22710 Level-0 table #14: 14673 bytes OK
+2026/03/04-05:30:33.493 22710 Delete type=0 #11
+2026/03/04-21:41:13.196 22710 Level-0 table #16: started
+2026/03/04-21:41:13.198 22710 Level-0 table #16: 13268 bytes OK
+2026/03/04-21:41:13.200 22710 Delete type=0 #13
+2026/03/04-21:41:13.200 22710 Compacting 4@0 + 1@1 files
+2026/03/04-21:41:13.203 22710 Generated table #17@0: 26 keys, 3899 bytes
+2026/03/04-21:41:13.203 22710 Compacted 4@0 + 1@1 files => 3899 bytes
+2026/03/04-21:41:13.205 22710 compacted to: files[ 0 1 1 0 0 0 0 ]
+2026/03/04-21:41:13.205 22710 Delete type=2 #7
+2026/03/04-21:41:13.205 22710 Delete type=2 #14
+2026/03/04-21:41:13.205 22710 Delete type=2 #9
+2026/03/04-21:41:13.205 22710 Delete type=2 #16
+2026/03/04-21:41:13.205 22710 Delete type=2 #12
