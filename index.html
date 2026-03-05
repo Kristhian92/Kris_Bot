@@ -1,40 +1,47 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>KrisBot - Asistente IA 24/7</title>
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KrisBot - Asistente IA</title>
-</head>
-
-<body style="background-color: #f4f7f6; font-family: Arial, sans-serif;">
-
-    <h1 style="text-align: center; margin-top: 50px;">Bienvenido a mi Web con IA</h1>
+  <body style="background-color: #f4f7f6; font-family: Arial, sans-serif">
+    <h1 style="text-align: center; margin-top: 50px">
+      Bienvenido a mi Web con IA
+    </h1>
+    <p style="text-align: center; color: #666">
+      El asistente se conectará a Oracle en unos segundos...
+    </p>
 
     <script>
-        !(function () {
-            let e = document.createElement("script"),
-                t = document.head || document.getElementsByTagName("head")[0];
-            (e.src =
-                "https://cdn.jsdelivr.net/npm/rasa-webchat@1.0.1/lib/index.js"),
-                (e.async = !0),
-                (e.onload = () => {
-                    window.WebChat.default(
-                        {
-                            customData: { language: "es" },
-                            socketUrl: "http://localhost:5005", // Conexión a tu Rasa
-                            title: "KrisBot",
-                            subtitle: "Asistente Virtual Híbrido",
-                            initPayload: "/greet_es",
-                            profileAvatar: "https://i.imgur.com/nGF1K8f.jpg",
-                            params: { storage: "session" }
-                        },
-                        null
-                    );
-                }),
-                t.insertBefore(e, t.firstChild);
-        })();
-    </script>
-</body>
+      !(function () {
+        let e = document.createElement("script"),
+          t = document.head || document.getElementsByTagName("head")[0];
 
+        // ¡El enlace corregido a la versión de la comunidad para Rasa 3!
+        e.src =
+          "https://cdn.jsdelivr.net/npm/@josh.chou/rasa-webchat@1.1.40/lib/index.js";
+        e.async = !0;
+        e.onload = () => {
+          window.WebChat.default(
+            {
+              initPayload: '/greet',
+              customData: { language: "es" },
+              socketUrl: "https://krisbot-uis.duckdns.org",
+              title: "KrisBot",
+              subtitle: "Asistente Ia 24/7",
+              // ESTE ES EL ESCUDO, DEBE ESTAR AQUÍ:
+              params: {
+                socketio: {
+                  transports: ["websocket"]
+                }
+              }
+            },
+            null
+          );
+        };
+        t.insertBefore(e, t.firstChild);
+      })();
+    </script>
+  </body>
 </html>
